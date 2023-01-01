@@ -1,0 +1,1 @@
+Fiz algumas anotações em forma de comentários para estudo, se atrapalhar a legibilidade do exercício me avise que eu mando ele novamente sem os comentários.

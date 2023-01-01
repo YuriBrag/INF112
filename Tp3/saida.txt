@@ -1,0 +1,3 @@
+Qual sera o tamanho do labirinto?
+Digite os valores do labirinto
+O labirinto nao possui saida

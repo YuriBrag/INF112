@@ -1,0 +1,43 @@
+Método -> o que se faz com o objeto, ex: j1.calculaPontos; calculaPts de j1 é o método que deve ser declarado no arq jogador.h, implementado em jogador.cpp e chamado pelo main.cpp.
+
+Polimosrfismo -> é uma forma de criar objetos com diferentes propriedades, ex: criar um usuário com ou sem foto de perfil; (com ou sem telefone)
+
+Herança -> diz respeito à hierarquia dos componentes ex: a conta é herdeira de agencia que é herdeira de banco
+
+_______
+
+Alocação estática -> Não pode ser alterado depois, espaço reservado ainda na compilação.
+
+Alocação Dinâmica -> Cria a variável durante a execução do programa. Deve ser liberado ao final do programa. Para new deve ser dado um delete no final:  int *valor = new int;  delete valor; // para vetor delete[] nomeVetor;
+
+* A funcao main fica no stack(pilha), entao as variaveis criadas dentro dela ficarao tambem no stack
+* Qualquer funcao declarada morara no stack que podem passar por referencia um valor para uma outra variavel da funcao main
+* Quando uma funcao secundaria termina as variaveis declaradas dentro dela morrem, somem do stack, caso tenham passado por referencia a uma outra da funcao main, por exemplo, ela fica apenas com o valor e nao a referencia em si
+
+
+(&x = adress of)
+(*x = value of)
+
+int function(int &f) {
+ f=f+3;
+ return f;
+}
+ // passagem por referencia
+=
+
+int function(int *f) {
+ *f=*f+3;
+ return *f;
+}
+
+Ao usar o new (ou o malloc em C) se aloca memoria no heap
+
+nullptr -> usado para atribuir um valor nulo a ponteiro
+
+int main() {
+ int *a = new int; //aloca dinamicamente a no heap, mas *a mora no main
+ int b = 10; //aloca b no stack
+ *a = 20; //atribui valor para a no heap
+ a = &b; //o ponteiro *a aponta para endereco de b
+ *a = 30; //atribui valor para a no heap e como *a aponta para end de b o valor de b muda
+}
